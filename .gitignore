@@ -1,5 +1,4 @@
 /.bundle
-/bin
-/vendor/bundle
+/vendor
 /spec/tmp/*
 Gemfile.lock
