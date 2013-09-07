@@ -2,3 +2,4 @@
 /vendor
 /spec/tmp/*
 Gemfile.lock
+/tmp
