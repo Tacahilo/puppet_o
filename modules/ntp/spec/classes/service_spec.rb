@@ -8,20 +8,20 @@ describe 'ntp::service' do
     )
   end
 
-  context '$virtual = virtualbox' do
-    let(:facts) { { :virtual => 'virtualbox' } }
+  context '$virtual is default' do
     it do
       should contain_service('ntpdate').with(
-        'ensure' => 'stopped',
+        'ensure' => 'running',
         'enable' => 'true',
       )
     end
   end
 
-  context '$virtual = other' do
+  context '$virtual is virtualbox' do
+    let(:facts) { { :virtual => 'virtualbox' } }
     it do
       should contain_service('ntpdate').with(
-        'ensure' => 'running',
+        'ensure' => 'stopped',
         'enable' => 'true',
       )
     end
