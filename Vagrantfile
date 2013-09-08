@@ -10,11 +10,10 @@ Vagrant.configure('2') do |config|
     ps_config.vm.network :forwarded_port, guest: 80, host: 8080
     ps_config.vm.network :private_network, ip: '10.0.0.100'
 
-    ps_config.provision 'puppet' do |puppet|
+    ps_config.provision 'puppet', :option => '--verbose --debug' do |puppet|
       puppet.manifest_path = 'manifests'
       puppet.manifest_file = 'puppet_server.pp'
       puppet.module_path   = 'modules'
-      puppet.options       = '--verbose --debug'
     end
   end
 end
