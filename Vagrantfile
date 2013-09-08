@@ -9,15 +9,12 @@ Vagrant.configure('2') do |config|
     ps_config.vm.hostname = 'server.puppet.local'
     ps_config.vm.network :forwarded_port, guest: 80, host: 8080
     ps_config.vm.network :private_network, ip: '10.0.0.100'
+
+    ps_config.provision 'puppet' do |puppet|
+      puppet.manifest_path = 'manifests'
+      puppet.manifest_file = 'puppet_server.pp'
+      puppet.module_path   = 'modules'
+      puppet.options       = '--verbose --debug'
+    end
   end
 end
-
-  # Enable provisioning with Puppet stand alone.  Puppet manifests
-  # are contained in a directory path relative to this Vagrantfile.
-  # You will need to create the manifests directory and a manifest in
-  # the file base.pp in the manifests_path directory.
-  #
-  # config.vm.provision :puppet do |puppet|
-  #   puppet.manifests_path = 'manifests'
-  #   puppet.manifest_file  = 'init.pp'
-  # end
