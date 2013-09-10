@@ -3,3 +3,4 @@
 /spec/tmp/*
 Gemfile.lock
 /tmp
+/coverage
