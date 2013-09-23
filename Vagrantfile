@@ -7,13 +7,10 @@ Vagrant.configure('2') do |config|
 
   config.vm.define :puppet_server do |ps_config|
     ps_config.vm.hostname = 'server.puppet.local'
+
+    ps_config.vm.synced_folder '.', '/vagrant'
+
     ps_config.vm.network :forwarded_port, guest: 80, host: 8080
     ps_config.vm.network :private_network, ip: '10.0.0.100'
-
-    ps_config.provision 'puppet', :option => '--verbose --debug' do |puppet|
-      puppet.manifest_path = 'manifests'
-      puppet.manifest_file = 'puppet_server.pp'
-      puppet.module_path   = 'modules'
-    end
   end
 end
