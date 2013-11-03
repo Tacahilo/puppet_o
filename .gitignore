@@ -1,7 +1,6 @@
 /.bundle
 /vendor
 /spec/tmp/*
-Gemfile.lock
 /tmp
 /coverage
 /.vagrant
