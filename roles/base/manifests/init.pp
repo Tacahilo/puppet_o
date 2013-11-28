@@ -1,5 +1,9 @@
 class base {
 
-  include base::packages
+  include yum_repos
+  include packages
+  include selinux
+  include git
+  include ntp
 
 }
