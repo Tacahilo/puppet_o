@@ -5,9 +5,12 @@ class packages::install {
     'gcc',
     'git',
     'make',
+    'mosh',
     'openssl-devel',
     'readline-devel',
     'sqlite-devel',
+    'tmux',
+    'tree',
     'vim-enhanced',
     'zsh',
   ]
