@@ -1,4 +1,4 @@
-class weechat {
+class weechat::install {
 
   $packages = [
     'weechat',
