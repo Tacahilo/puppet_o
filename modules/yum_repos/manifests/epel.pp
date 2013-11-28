@@ -12,7 +12,7 @@ class yum_repos::epel {
     ensure => true,
     owner  => 'root',
     group  => 'root',
-    mode   => 644,
+    mode   => '0644',
     source => "puppet:///modules/yum_repos/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::operatingsystemmajrelease}",
   }
 
