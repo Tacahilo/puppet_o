@@ -1,6 +1,6 @@
 class varnish::service {
 
-  service{ "varnish":
+  service{ 'varnish':
     ensure => running,
     enable => true,
   }
