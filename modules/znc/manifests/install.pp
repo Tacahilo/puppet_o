@@ -1,6 +1,6 @@
 class znc::install {
 
-  package{ 'znc':
+  package { 'znc':
     ensure => installed,
   }
 

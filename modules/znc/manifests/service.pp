@@ -1,6 +1,6 @@
 class znc::service {
 
-  service{ 'znc':
+  service { 'znc':
     ensure => running,
     enable => true,
   }
