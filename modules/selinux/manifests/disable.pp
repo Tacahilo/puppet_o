@@ -1,7 +1,7 @@
 class selinux::disable {
 
   file { '/etc/selinux/config':
-    ensure  => true,
+    ensure  => file,
     mode    => '0644',
     content => 'SELINUX=disabled',
   }

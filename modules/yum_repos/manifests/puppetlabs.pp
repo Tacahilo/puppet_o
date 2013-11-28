@@ -1,7 +1,7 @@
 class yum_repos::puppetlabs {
 
   file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-puppetlabs':
-    ensure => true,
+    ensure => file,
     owner  => 'root',
     group  => 'root',
     mode   => '0644',
