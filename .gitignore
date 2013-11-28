@@ -1,6 +1,4 @@
 /.bundle
 /vendor
 /spec/tmp/*
-/tmp
-/coverage
 /.vagrant
