@@ -3,9 +3,11 @@ class sc {
   include base
   include znc
   include weechat
+  include xbuild
 
   Class['base']
-  -> Class['znc']
-  -> Class['weechat']
+  -> Class['xbuild']
+#  -> Class['znc']
+#  -> Class['weechat']
 
 }
