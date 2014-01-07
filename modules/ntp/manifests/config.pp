@@ -1,15 +1,16 @@
 class ntp::config {
 
-  file {
-    '/etc/ntp.conf':
-      ensure  => present,
-      content => 'puppet:///modules/ntp/etc/ntp.conf';
+  file { '/etc/ntp.conf':
+    ensure  => present,
+    content => 'puppet:///modules/ntp/etc/ntp.conf',
+  }
 
-    '/etc/ntp.d':
-      ensure => directory;
+  file { '/etc/ntp.d':
+    ensure => directory,
+  }
 
-    '/etc/ntp.d/drift':
-      ensure => present;
+  file { '/etc/ntp.d/drift':
+    ensure => present,
   }
 
 }
