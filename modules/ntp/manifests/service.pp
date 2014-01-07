@@ -5,13 +5,8 @@ class ntp::service {
     enable    => true,
   }
 
-  $ensure_type = $::virtual ? {
-    'virtualbox' => stopped,
-    default      => running,
-  }
-
   service { 'ntpdate':
-    ensure  => $ensure_type,
+    ensure  => stopped,
     enable  => true,
   }
 
