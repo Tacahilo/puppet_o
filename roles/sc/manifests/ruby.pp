@@ -1,5 +1,7 @@
 class sc::ruby {
 
-  ::xbuild::ruby::install { '2.1.0': }  
+  ::xbuild::lang::install { 'ruby':
+    version => '2.1.0',
+  }
 
 }
