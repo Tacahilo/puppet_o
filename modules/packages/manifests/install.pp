@@ -4,6 +4,7 @@ class packages::install {
     'bzip2-devel',
     'gcc',
     'git',
+    'nkf',
     'make',
     'mosh',
     'openssl-devel',
