@@ -1,13 +1,13 @@
 # managed by puppet
-user             nginx;
-worker_processes 1;
+user             <%= @user %>;
+worker_processes <%= @processes %>;
 
 error_log /var/log/nginx/error.log;
 pid       /var/run/nginx.pid;
 
 
 events {
-    worker_connections 1024;
+    worker_connections <%= @connections %>;
 }
 
 
