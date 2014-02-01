@@ -3,7 +3,6 @@ class packages::install {
   $packages = [
     'bzip2-devel',
     'gcc',
-    'git',
     'nkf',
     'make',
     'mosh',
