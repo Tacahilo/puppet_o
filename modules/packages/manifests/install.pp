@@ -5,6 +5,7 @@ class packages::install {
     'gcc',
     'gcc-c++',
     'jwhois',
+    'logrotate',
     'make',
     'mosh',
     'nkf',

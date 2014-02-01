@@ -14,4 +14,10 @@ class sc::wiki::file {
     content => template('sc/etc/nginx/conf.d/wiki.conf.erb'),
   }
 
+  file { '/etc/logrotate.d/unicorn.conf':
+    ensure  => file,
+    source  => 'puppet:///modules/sc/etc/logrotate.d/unicorn.conf',
+    require => Package['logrotate'],
+  }
+
 }
