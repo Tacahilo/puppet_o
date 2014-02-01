@@ -3,10 +3,12 @@ class packages::install {
   $packages = [
     'bzip2-devel',
     'gcc',
-    'nkf',
+    'gcc-c++',
     'make',
     'mosh',
+    'nkf',
     'openssl-devel',
+    'patch',
     'readline-devel',
     'sqlite-devel',
     'tmux',
