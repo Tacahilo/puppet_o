@@ -2,3 +2,4 @@
 /vendor
 /spec/tmp/*
 /.vagrant
+Gemfile.lock
