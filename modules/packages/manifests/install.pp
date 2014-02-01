@@ -4,6 +4,7 @@ class packages::install {
     'bzip2-devel',
     'gcc',
     'gcc-c++',
+    'jwhois',
     'make',
     'mosh',
     'nkf',
