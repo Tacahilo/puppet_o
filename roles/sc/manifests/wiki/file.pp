@@ -1,4 +1,10 @@
-class sc::wiki::nginx {
+class sc::wiki::file {
+
+  file { '/var/log/unicorn':
+    ensure => directory,
+    owner  => 'root',
+    group  => 'web',
+  }
 
   $sock_path   = '/var/run/unicorn_wiki.sock'
   $server_name = 'wiki.hifumi.info'
