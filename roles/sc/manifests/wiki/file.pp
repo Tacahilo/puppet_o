@@ -10,13 +10,11 @@ class sc::wiki::file {
   $server_name = 'wiki.hifumi.info'
 
   file { '/etc/nginx/conf.d/wiki.conf':
-    ensure  => file,
     content => template('sc/etc/nginx/conf.d/wiki.conf.erb'),
   }
 
-  file { '/etc/logrotate.d/unicorn.conf':
-    ensure  => file,
-    source  => 'puppet:///modules/sc/etc/logrotate.d/unicorn.conf',
+  file { '/etc/logrotate.d/unicorn':
+    source  => 'puppet:///modules/sc/etc/logrotate.d/unicorn',
     require => Package['logrotate'],
   }
 

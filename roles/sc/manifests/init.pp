@@ -1,9 +1,9 @@
 class sc {
 
   include ::base
-  include ::xbuild
   include ::sc::package
   include ::sc::file
+  include ::xbuild
   include ::sc::ruby
   include ::sc::nginx
   include ::sc::wiki
