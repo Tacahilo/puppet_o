@@ -1,9 +1,9 @@
 class munin {
 
   include ::munin::install
-  include ::munin::service
+  include ::munin::node
 
      Class['::munin::install']
-  -> Class['::munin::service']
+  -> Class['::munin::node']
 
 }
