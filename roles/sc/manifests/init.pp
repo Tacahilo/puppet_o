@@ -1,6 +1,7 @@
 class sc {
 
   include ::base
+  include ::munin
   include ::sc::package
   include ::sc::file
   include ::xbuild
@@ -9,6 +10,7 @@ class sc {
   include ::sc::wiki
 
      Class['::base']
+  -> Class['::munin']
   -> Class['::sc::package']
   -> Class['::sc::file']
   -> Class['::xbuild']
