@@ -20,11 +20,6 @@ iptables -P INPUT   DROP
 iptables -P OUTPUT  ACCEPT
 iptables -P FORWARD DROP
 
-# black list
-for IP in `cat /usr/local/src/blacklist.{cn,ru}`; do
-    iptables -A INPUT -s ${IP} -j DROP
-done
-
 iptables -A INPUT -p icmp -j ACCEPT
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -s $LOCALNET -j ACCEPT
@@ -35,7 +30,7 @@ iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 #----------------------------------------------------------#
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-iptables -A INPUT -p tcp --dport 50001 -j ACCEPT
+iptables -A INPUT -s 192.30.252.0/22 -p tcp --dport 50000 -j ACCEPT
 
 # save and start
 /etc/rc.d/init.d/iptables save
