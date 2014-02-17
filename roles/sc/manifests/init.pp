@@ -8,6 +8,7 @@ class sc {
   include ::sc::ruby
   include ::sc::nginx
   include ::sc::wiki
+  include ::sc::znc
 
      Class['::base']
   -> Class['::munin']
@@ -17,5 +18,6 @@ class sc {
   -> Class['::sc::ruby']
   -> Class['::sc::nginx']
   -> Class['::sc::wiki']
+  -> Class['::sc::znc']
 
 }
