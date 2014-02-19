@@ -2,6 +2,7 @@ class base::package {
 
   include ::git
   include ::ntp
+  include ::puppet
 
   $packages = [
     'bzip2-devel',
