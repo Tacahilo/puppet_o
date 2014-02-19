@@ -11,4 +11,15 @@ class sc::nginx::file {
     group  => 'nginx',
   }
 
+  #munin
+  file {
+    '/etc/munin/plugins/nginx_status':
+      ensure => link,
+      target => '/usr/share/munin/plugins/nginx_status';
+
+    '/etc/munin/plugins/nginx_request':
+      ensure => link,
+      target => '/usr/share/munin/plugins/nginx_request';
+  }
+
 }

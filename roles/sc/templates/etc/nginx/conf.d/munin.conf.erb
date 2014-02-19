@@ -1,0 +1,24 @@
+server {
+  listen 80;
+  server_name localhost;
+
+  location /nginx_status {
+    stub_status on;
+    access_log off;
+    allow 127.0.0.1;
+    deny all;
+  }
+}
+
+server {
+  listen 80;
+  server_name <%= @server_name %>;
+
+  root /var/www;
+  index index.html;
+
+  location /munin {
+    auth_basic "Restricted";
+    auth_basic_user_file /var/www/munin/.htpasswd;
+  }
+}
