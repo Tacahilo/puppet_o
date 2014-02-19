@@ -1,8 +1,7 @@
 class ntp {
 
-  include ntp::install
-  include ntp::service
+     class{'ntp::install':}
+  -> class{'ntp::config':}
+  ~> class{'ntp::service':}
 
-  Class['ntp::install']
-  -> Class['ntp::service']
 }

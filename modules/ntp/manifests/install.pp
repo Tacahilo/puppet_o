@@ -9,4 +9,12 @@ class ntp::install {
     ensure => installed,
   }
 
+  file { '/etc/ntp.d':
+    ensure => directory,
+  }
+
+  file { '/etc/ntp.d/drift':
+    ensure => present,
+  }
+
 }
