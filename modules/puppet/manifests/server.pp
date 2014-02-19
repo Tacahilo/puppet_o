@@ -1,6 +1,6 @@
 class puppet::server {
 
-  include puppet::server::install
-  include puppet::server::service
+     class{'puppet::server::install':}
+  -> class{'puppet::server::service':}
 
 }
