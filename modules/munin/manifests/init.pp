@@ -1,9 +1,6 @@
 class munin {
 
-  include ::munin::install
-  include ::munin::node
-
-     Class['::munin::install']
-  -> Class['::munin::node']
+     class{'munin::install':}
+  -> class{'munin::node':}
 
 }
