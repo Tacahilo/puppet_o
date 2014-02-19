@@ -1,7 +1,7 @@
 class base {
 
   include ::yum_repos
-  include ::packages
+  include base::package
   include ::git
   include ::selinux
   include ::ntp

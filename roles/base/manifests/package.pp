@@ -1,10 +1,17 @@
-class packages::install {
+class base::package {
 
   $packages = [
     'bzip2-devel',
     'gcc',
     'gcc-c++',
     'jwhois',
+    'libcurl-devel',
+    'libjpeg-turbo-devel',
+    'libmcrypt-devel',
+    'libpng-devel',
+    'libtidy-devel',
+    'libxml2-devel',
+    'libxslt-devel',
     'logrotate',
     'make',
     'mosh',
