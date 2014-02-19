@@ -1,5 +1,8 @@
 class base::package {
 
+  include ::git
+  include ::ntp
+
   $packages = [
     'bzip2-devel',
     'gcc',
