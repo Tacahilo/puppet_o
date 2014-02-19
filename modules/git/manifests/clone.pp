@@ -1,14 +1,14 @@
 define git::clone (
-  $path,
-  $repo = $name,
+  $dist,
+  $repo = $name
 ) {
 
-  require ::git
+  require git
 
   exec { "git_clone_${name}":
-    command => "git clone --recursive ${repo} ${path}",
+    command => "git clone --recursive ${repo} ${dist}",
     path    => '/usr/bin:/usr/local/bin',
-    creates => "${path}/.git",
+    creates => "${dist}/.git",
     timeout => 0,
   }
 
