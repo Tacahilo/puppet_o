@@ -2,7 +2,7 @@ class sc::xbuild::install {
 
   ::xbuild::lang::install {
     'ruby':
-      version => '2.1.0';
+      version => '2.1.1';
 
     'python':
       version => '2.7.6';
