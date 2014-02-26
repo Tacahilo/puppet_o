@@ -7,6 +7,7 @@ class sc::wiki::file {
   }
 
   $sock_path   = '/var/run/unicorn_wiki.sock'
+  $listen = 8080
   $server_name = 'wiki.hifumi.info'
 
   file { '/etc/nginx/conf.d/wiki.conf':

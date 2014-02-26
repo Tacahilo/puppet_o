@@ -1,0 +1,12 @@
+server {
+  listen <%= @listen %>;
+  server_name <%= @server_name %>;
+
+  access_log /var/log/nginx/blog_access.log ltsv;
+  error_log /var/log/nginx/blog_error.log;
+
+  location / {
+    root /var/www/blog;
+    index index.html;
+  }
+}

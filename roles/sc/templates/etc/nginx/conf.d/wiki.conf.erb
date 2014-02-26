@@ -3,7 +3,7 @@ upstream unicorn {
 }
  
 server {
-    listen      80;
+    listen      <%= @listen %>;
     server_name <%= @server_name %>;
     access_log  /var/log/nginx/wiki_access.log ltsv;
     error_log   /var/log/nginx/wiki_error.log;
