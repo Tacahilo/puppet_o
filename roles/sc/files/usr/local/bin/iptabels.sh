@@ -59,6 +59,7 @@ iptables -A INPUT -p icmp --icmp-type echo-request -j LOG_PINGDEATH
 #----------------------------------------------------------#
 iptables -A INPUT -p tcp --dport SSH -j ACCEPT
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport IRC -j ACCEPT
 iptables -A INPUT -s 192.30.252.0/22 -p tcp --dport GITHUB -j ACCEPT
 
 # save and start
