@@ -4,6 +4,7 @@ class sc::package {
 
   $packages = [
     'libicu-devel',
+    'spawn-fcgi',
   ]
 
   package { $packages:

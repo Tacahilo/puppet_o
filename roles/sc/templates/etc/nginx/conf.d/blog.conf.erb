@@ -5,8 +5,14 @@ server {
   access_log /var/log/nginx/blog_access.log ltsv;
   error_log /var/log/nginx/blog_error.log;
 
-  location / {
-    root /var/www/blog;
-    index index.html;
+  root /var/www/blog;
+  index index.html;
+
+  location ~* /.*\.(css|js) {
+    expires 15d;
+  }
+
+  location ~* /.*\.(png|gif|jpg) {
+    expires 30d;
   }
 }
