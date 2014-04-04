@@ -4,6 +4,7 @@ class sc::package {
 
   $packages = [
     'libicu-devel',
+    'perl-ExtUtils-MakeMaker', # for git
     'spawn-fcgi',
   ]
 
