@@ -3,3 +3,4 @@
 /spec/tmp/*
 /.vagrant
 Gemfile.lock
+.DS_Store
