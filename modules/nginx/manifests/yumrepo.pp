@@ -1,7 +1,10 @@
 class nginx::yumrepo {
 
-  file { '/etc/yum.repos.d/nginx.repo':
-    source => 'puppet:///modules/nginx/etc/yum.repos.d/nginx.repo',
+  yumrepo { 'nginx':
+    descr    => 'nginx repo',
+    enabled  => 1,
+    baseurl  => 'http://nginx.org/packages/centos/$releasever/$basearch/',
+    gpgcheck => 0,
   }
 
 }
